@@ -104,7 +104,7 @@ export default Ember.Mixin.create({
 
   _addObservers: Ember.on('didInsertElement', function() {
     this.addObserver('language', function() {
-      this.$().datepicker('remove');
+      this.$().datepicker('destroy');
       this.setupBootstrapDatepicker();
     });
 
